@@ -1,0 +1,64 @@
+﻿@model CE160059_SignalRLab.Models.Post
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="postID" />
+            <div class="form-group">
+                <label asp-for="authorID" class="control-label"></label>
+                <select asp-for="authorID" class="form-control" asp-items="ViewBag.authorID"></select>
+                <span asp-validation-for="authorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="createdDate" class="control-label"></label>
+                <input asp-for="createdDate" class="form-control" />
+                <span asp-validation-for="createdDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="updatedDate" class="control-label"></label>
+                <input asp-for="updatedDate" class="form-control" />
+                <span asp-validation-for="updatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="content" class="control-label"></label>
+                <input asp-for="content" class="form-control" />
+                <span asp-validation-for="content" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="publicStatus" /> @Html.DisplayNameFor(model => model.publicStatus)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="categoryID" class="control-label"></label>
+                <select asp-for="categoryID" class="form-control" asp-items="ViewBag.categoryID"></select>
+                <span asp-validation-for="categoryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
