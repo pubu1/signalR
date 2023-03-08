@@ -73,6 +73,8 @@ namespace CE160059_SignalRLab.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.createdDate = DateTime.Now;
+                post.updatedDate = DateTime.Now;
                 _context.Add(post);
                 await _context.SaveChangesAsync();
                 await _signalrHub.Clients.All.SendAsync("LoadPosts");
@@ -117,6 +119,8 @@ namespace CE160059_SignalRLab.Controllers
             {
                 try
                 {
+                    post.createdDate = post.createdDate; 
+                    post.updatedDate = DateTime.Now; 
                     _context.Update(post);
                     await _context.SaveChangesAsync();
                     await _signalrHub.Clients.All.SendAsync("LoadPosts");

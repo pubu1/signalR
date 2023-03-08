@@ -159,3 +159,5 @@ F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\refin
 F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\CE160059_SignalRLab.pdb
 F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\CE160059_SignalRLab.genruntimeconfig.cache
 F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\ref\CE160059_SignalRLab.dll
+F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\Razor\Views\Users\Login.cshtml.g.cs
+F:\Example\PRN221\CE160059_SignalRLab\CE160059_SignalRLab\obj\Debug\net5.0\Razor\Views\Users\Register.cshtml.g.cs

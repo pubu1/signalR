@@ -17,6 +17,7 @@ namespace CE160059_SignalRLab.Controllers
         public CategoriesController(ApplicationDBContext context, IHubContext<SignalrServer> signalrHub)
         {
             _context = context;
+            _signalrHub = signalrHub;
         }
 
         // GET: Categories
